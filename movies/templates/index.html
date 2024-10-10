@@ -1,0 +1,22 @@
+{% extends "application.html" %}
+
+{% block title %}100 великих фильмов XXI века{% endblock %}
+
+{% block content %}
+    <h1 class="text-center">100 великих фильмов XXI века</h1>
+    <form action="/" method="post">
+        <button class="btn btn-primary mb-5">Загрузить фильмы</button>
+    </form>
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Название</th>
+                <th>Описание</th>
+                <th>Рейтинг IMDb</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+{% endblock %}
