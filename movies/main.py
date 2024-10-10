@@ -83,6 +83,6 @@ async def get_movies():
     result = session.query(
         Movie.id, Movie.title, Movie.description, Movie.rating
         ).all()
-    json_data = [u._asdict() for u in result]
+    json_data = [movie._asdict() for movie in result]
     json_output = json.dumps(json_data)
     return json_output
