@@ -61,9 +61,9 @@ async def add_movies():
         else:
             images.append('https://placehold.co/600x400.jpeg')
     for id, url in enumerate(images):
-        if len(os.listdir(f"{os.getcwd()}/../img/")) == 0:
+        if len(os.listdir(f"{os.getcwd()}/img/")) == 0:
             data = requests.get(url)
-            with open(f"{os.getcwd()}/../img/{id}.jpeg", "wb") as output_file:
+            with open(f"{os.getcwd()}/img/{id}.jpeg", "wb") as output_file:
                 output_file.write(data.content)
     data = []
     for title, description, rating in zip(
